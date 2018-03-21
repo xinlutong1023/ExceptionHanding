@@ -6,8 +6,19 @@
     </head>
     <body>
         <script>
-            var i=11;
-            document.write(i>10?"i大于10":"i小于10");
+            var i=5;
+            switch(i){
+                case 1://冒号不是分号
+                document.write("i=1");
+                break;//必须加，跳出当前
+                case 2:
+                document.write("i=2");
+                break;
+                default:
+                document.write("条件不满足case");
+                break;
+
+            }
         </script>
   
     </body>
