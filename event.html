@@ -1,0 +1,40 @@
+<DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>事件</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="mgs()" onunload="mgs2()">
+        <div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+        <script>
+            function onOver(ooj){
+                ooj.innerHTML="hello";
+            }
+            function onOut(ooj){
+                ooj.innerHTML="xinlutong";
+            }
+        </script>
+        <form>
+            <input type="text" onchange="alert('hello内容')" onfocus="changeDemo(this)" onblur="changeBlur(this)">
+            <input type="text" onselect="changeDemo(this)" onfocus="changeDemo2(this)" onblur="changeBlur(this)">
+        </form>
+        <script>
+            function changeDemo(bg){
+                bg.style.background="red";
+            }
+            function changeDemo2(bg){
+                bg.style.background="yellow";
+            }
+            function changeBlur(bg){
+                bg.style.background="green";
+            }
+            function mgs(){
+                alert("网页内容加载完毕");
+            }
+            function mgs2(){
+                alert("网页已经关闭");
+            }
+        </script>
+    </body>
+</html>
