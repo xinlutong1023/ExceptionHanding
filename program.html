@@ -6,18 +6,12 @@
     </head>
     <body>
         <script>
-            var i=5;
-            switch(i){
-                case 1://冒号不是分号
-                document.write("i=1");
-                break;//必须加，跳出当前
-                case 2:
-                document.write("i=2");
-                break;
-                default:
-                document.write("条件不满足case");
-                break;
+            for(var i=0;i<10;i++){
+                if(i==5){
+                    continue;
 
+                }
+                document.write("i="+i+"</br>");
             }
         </script>
   
