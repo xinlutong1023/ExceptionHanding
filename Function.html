@@ -5,11 +5,16 @@
         <title></title>
     </head>
     <body>
+        <p id="pid"></p>
         <script>
-            function demo(name,age){
-                alert("hello:"+name+"我的年龄是："+age);
+            function demo(a,b){
+                if(a>b){
+                    return "a比较大";
+                }else{
+                    return "b比较大";
+                }
             }
+           document.getElementById("pid").innerHTML=demo(12,10);
         </script>
-        <button onclick="demo('xinlutong','18')">按钮</button>
     </body>
 </html>
