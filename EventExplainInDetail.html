@@ -1,0 +1,45 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Event</title>
+        <body>
+            <div id="div">
+                <button id="btn1">按钮</button>
+            </div>
+           <!-- <script>
+                function demo(){
+                    alert("hello html事件处理")
+                }
+            </script>-->
+            <!-- <script>
+            var btn1=document.getElementById("btn1");
+            btn1.onclick=function(){alert("hello dom0级事件处理程序1")}//被覆盖掉
+            btn1.onclick=function(){alert("hello dom0级事件处理程序2")}
+            </script> -->
+            <!-- <script>
+                var btn1=document.getElementById("btn1");
+                btn1.addEventListener("click",demo1);
+                btn1.addEventListener("click",demo2);
+                function demo1(){
+                    alert("dom2级事件处理1");
+                }
+                function demo2(){
+                    alert("dom2级事件处理2");
+                }
+                btn1.removeEventListener("click",demo2);
+            </script> -->
+            <script>
+                var btn1=document.getElementById("btn1");
+                if(btn1.addEventListener){
+                    btn1.addEventListener("click",demo);
+                }else if(btn1.attachEvent("onclick",demo){
+                    btn1.attachEvent("onclick",demo);
+                }
+                functtion demo(){
+                    alert("hello");
+                }
+            </script>
+        </body>
+    </head>
+</html>
