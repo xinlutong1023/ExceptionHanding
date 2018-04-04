@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+        <div id='div1'></div> 
+        <input type="file" onclick='addElement()' value='文件' >
+        <input type = 'button' onclick='addElement()' value='添加'>   
+        <input type = 'button' onclick='dropElement()' value='删除文件'>    
+    </body>
+    <script>
+            var i = 1;
+            function addElement(){
+            var div = document.createElement('div');
+          div.innerHTML = '<input type="file">';
+          div.id = 'Ele'+i;
+          document.getElementById('div1').appendChild(div);
+          i++;
+            }
+            function dropElement(){
+               var aaa = document.getElementById('Ele'+(i-1));
+               document.getElementById('div1').removeChild(aaa);
+               i--;
+            }
+          </script>
+    </html>

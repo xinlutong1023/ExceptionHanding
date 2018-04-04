@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+<script type="text/javascript">
+    var num = 0;
+    function insert(obj){
+        if(num == 0){
+            var div=document.createElement('div');
+            div.id='ok';
+            div.innerHTML='插入的内容';
+            obj.appendChild(div);
+            num = 1;
+        }
+        else{
+            num = 0;
+            var box = document.getElementById("ok");
+            box.parentNode.removeChild(box);
+        }
+
+    }
+</script>
+<body>
+    <div>
+        1<a href="#" onclick="insert(this);return false;">点</a><br/>
+        2<a href="#" onclick="insert(this);return false;">点</a><br/>
+        3<a href="#" onclick="insert(this);return false;">点</a><br/>
+        4<a href="#" onclick="insert(this);return false;">点</a><br/>
+</div>
+</body>
+</html>

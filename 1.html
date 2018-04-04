@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <title>点击增加 </title>  
+  
+</head>  
+<button onclick="Function()">点击增加</button>
+<script>  
+function Function(){
+    var btn = document.createElement("button");  
+        var t = document.createTextNode("点击增加");
+        btn.appendChild(t);
+        document.body.appendChild(btn);
+        btn.onclick=function(){
+            Function();
+        }
+        
+    };
+</script>  
+<body>  
+</body>  
+</html>  

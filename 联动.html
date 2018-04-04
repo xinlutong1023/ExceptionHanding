@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="utf-8" />  
+        <title>联动</title>  
+        <script type="text/javascript">
+            function setStyle()
+            {
+            document.body.style.background="#FFCC80 url(bgdesert.jpg) repeat-y";
+            }
+            </script>
+    </head>  
+    <body> 
+            <input type="button" onclick="setStyle()"
+            value="Set background style" />
+        <p class="cf30 f12 mb10" style="line-height:20px;">食品种类：
+            <select id="abc" onchange="change();">  
+                <option value="">请选择</option>  
+                <option value="1">水果</option>  
+                <option value="2">蔬菜</option>  
+                <option value="3">肉类</option>  
+            </select>  
+        </p>  
+        <p>具体包括：
+            <select id="def">  
+                <option>请选择</option>  
+            </select>  
+        </p>  
+    </body>  
+    <script >
+var data = [  
+    ["西瓜","草莓","苹果"],  
+    ["白菜","萝卜","韭菜"],  
+    ["鸡肉","鱼肉","猪肉"]  
+]  
+  
+function change(){  
+    var abc = document.getElementById("abc");  
+    var defs = document.getElementById("def");  
+    var index = abc.value;                   
+    var selects = data[index-1];
+    var oldOptions = defs.children;
+    var length = oldOptions.length; 
+    for(var i=0;i<length;i++){               
+        defs.removeChild(oldOptions[0]);
+    } if(index==0) return;                  
+      for(var i=0;i<selects.length;i++){       
+        var option = document.createElement("option");  
+        option.innerHTML = selects[i];  
+        def.appendChild(option);  
+    }  
+}  </script>  
+</html>  

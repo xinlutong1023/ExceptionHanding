@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html>
+    <head>
+<script src="jquery.min.js" type="text/javascript"></script>
+
+<!--jquery.min.js文件下载http://download.csdn.net/source/3310749-->
+<form>
+<div id="newElement"></div>
+<input type="button" value="生成新元素" id="createElement" />
+</form>
+<script>
+
+$(document).ready(function(){
+  $("#createElement").click(function(){
+
+    //统计当前页面中使有以newButton_开头的元素个数，生成ID
+    id = $("[id^='newButton_']").size()+1;
+    //生成新元素，追加到ID值为newElement的元素中
+    $(box.getButton(id)).appendTo($("#newElement"));
+
+      //绑定click事件,其它change事件类似
+      $("#newButton_"+id).click(function(){
+        box.getClick();
+      });
+
+    });
+});
+
+ 
+
+//生成一个对象盒子,面向对象思想，封装我们的函数，强烈推荐这种方法
+var box = {};
+
+
+box.getButton = function(id){
+return '<input type="button" value="新按钮" id="newButton_'+id+'" /><br />';
+//返回任何你需要生成的新元素
+}
+
+ 
+
+box.getClick = function(){
+alert('事件生效啦！你点击了新按钮');
+//添加任何你需要的代码
+}
+        
+<head>
+<body></body>
+
+</script>
+</html>
